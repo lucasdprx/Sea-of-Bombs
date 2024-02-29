@@ -1,19 +1,37 @@
+using System.Collections;
 using UnityEngine;
 
 public class BOMB : MonoBehaviour
 {
     public GameObject bombObject;
-    void Update()
+    public static BOMB Instance;
+    [HideInInspector] public bool _isFlee = false;
+    [HideInInspector] public GameObject bal;
+    [HideInInspector] public bool _explosion;
+
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Instance != null)
         {
-            SpawnBomb();
+            Destroy(Instance);
         }
+
+        Instance = this;
     }
 
-    private void SpawnBomb()
+    public void SpawnBomb()
     {
-        GameObject bal = Instantiate(bombObject, gameObject.transform.position, Quaternion.identity);
-        bal.transform.localScale = new Vector3(2 ,2 ,2);
+        bal = Instantiate(bombObject, gameObject.transform.position, Quaternion.identity);
+        StartCoroutine(TimeBomb(2));
+    }
+
+    IEnumerator TimeBomb(int second)
+    {
+        yield return new WaitForSeconds(second);
+        Move_Ennemi.Instance._posBomb = bal.transform.position;
+        Destroy(bal);
+        _isFlee = false;
+        _explosion = true;
+        
     }
 }

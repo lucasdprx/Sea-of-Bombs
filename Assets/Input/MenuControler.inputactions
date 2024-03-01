@@ -1,0 +1,34 @@
+{
+    "name": "MenuControler",
+    "maps": [
+        {
+            "name": "Menu",
+            "id": "65b8588b-3672-46db-8ea0-0d8381615227",
+            "actions": [
+                {
+                    "name": "Active/DesactiveMenu",
+                    "type": "Button",
+                    "id": "f88cfe9f-99f4-4c8d-ba74-f58d284ff059",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "708375e8-ba7e-4cf4-8162-ae8306d92dbc",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Active/DesactiveMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

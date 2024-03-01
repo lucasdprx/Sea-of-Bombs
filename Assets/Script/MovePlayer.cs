@@ -23,7 +23,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (!_wait)
         {
-            StartCoroutine(wait(.2f));
+            StartCoroutine(wait(1.0f));
         }
         _initPos = _agent.transform.position;
     }
@@ -32,6 +32,7 @@ public class MovePlayer : MonoBehaviour
         if (_ennemi != null)
         {
             Move();
+            SpawnBombWall();
         }      
     }
 
@@ -57,6 +58,19 @@ public class MovePlayer : MonoBehaviour
             if (BOMB.Instance._nbBomb > 0)
                 BOMB.Instance.SpawnBomb();
             Flee();
+        }
+    }
+
+    private void SpawnBombWall()
+    {
+        for (int i = 0; i < GridManager.Instance._centerCases.Count; i++)
+        {
+            if (GridManager.Instance._centerCases[i]._isCrate && Vector3.Distance(GridManager.Instance._centerCases[i].transform.position, _agent.transform.position) <= 1.0f)
+            {
+                Flee();
+                BOMB.Instance.SpawnBomb();
+                return;
+            }
         }
     }
 }

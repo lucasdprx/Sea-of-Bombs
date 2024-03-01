@@ -9,4 +9,5 @@ public class CardData : ScriptableObject
     public Sprite _cardImage;
     public Sprite _cardImageDos;
     public string _name;
+    public int _prestige;
 }

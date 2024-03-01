@@ -16,15 +16,19 @@ public class GridManager : MonoBehaviour
     public List<Case> _borderCases;
     public List<Case> _centerCases;
 
+    public static GridManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         SetBorderList();
 
         _total = _crateCount;
-        for (int i = 0; i <= _total; i++)
-        {
-            InvestmentElement();
-        }
+        InvestmentElement();
     }
 
 
@@ -46,23 +50,24 @@ public class GridManager : MonoBehaviour
 
     public void InvestmentElement()
     {
-        int _rand = Random.Range(0, _centerCases.Count);
-        if (_centerCases[_rand].IsEmpty())
+        int total = _crateCount;
+        bool _isBlock = false;
+        for (int i = 0; i < total; i++)
         {
-            if (_crateCount > 0 && !_centerCases[_rand]._isInvincible)
+            if (_isBlock)
+            {
+                i--;
+                _isBlock = false;
+            }
+            int _rand = Random.Range(0, _centerCases.Count);
+            if (!_centerCases[_rand]._isInvincible && !_centerCases[_rand]._isCrate)
             {
                 _centerCases[_rand].SetCrate();
-                _crateCount--;
             }
-            else
-            {
-                Debug.Log("Invincible");
-            }
-        }
-        else
-        {
-            InvestmentElement();
-            return;
+            else 
+                _isBlock = true;
+            
+
         }
     }
 

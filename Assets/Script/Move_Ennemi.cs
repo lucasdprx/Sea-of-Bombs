@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,7 +28,7 @@ public class Move_Ennemi : MonoBehaviour
         if (BOMB.Instance._explosion)
         {
             if (Vector3.Distance(_posBomb, _agent.transform.position) <= 2)
-                _agent.transform.position = _initPos;
+                Destroy(gameObject);
             BOMB.Instance._explosion = false;
         }
     }

@@ -84,11 +84,19 @@ public class ButtonManager : MonoBehaviour
         if (!_optionActive)
         {
             GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(true);
+            GameObject.Find("MenuManager").transform.Find("CreditButton").gameObject.SetActive(false);
+            GameObject.Find("MenuManager").transform.Find("PlayButton").gameObject.SetActive(false);
+            GameObject.Find("MenuManager").transform.Find("QuitButton").gameObject.SetActive(false);
+            GameObject.Find("MenuManager").transform.Find("OptionButton").gameObject.SetActive(false);
             _optionActive = true;
         }
         else
         {
             GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(false);
+            GameObject.Find("MenuManager").transform.Find("CreditButton").gameObject.SetActive(true);
+            GameObject.Find("MenuManager").transform.Find("PlayButton").gameObject.SetActive(true);
+            GameObject.Find("MenuManager").transform.Find("QuitButton").gameObject.SetActive(true);
+            GameObject.Find("MenuManager").transform.Find("OptionButton").gameObject.SetActive(true);
             _optionActive = false;
         }
     }

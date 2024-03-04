@@ -9,6 +9,7 @@ public class Case : MonoBehaviour
     [SerializeField] string _coordinatesWidth;
 
     public Material _material;
+    public Material _materialInvincible;
     public static Case Instance;
     public bool _isInvincible;
     public bool _isCrate;
@@ -38,6 +39,22 @@ public class Case : MonoBehaviour
         gameObject.transform.position += new Vector3(0,1,0);
         gameObject.GetComponent<NavMeshObstacle>().carving = true;
         _isCrate = true;
+    }
+
+    public void SetInvincible()
+    {
+        if (_isInvincible || _isCrate) 
+        {
+            gameObject.GetComponent<MeshRenderer>().material = _materialInvincible;
+            _isInvincible = true;
+            _isCrate = false;
+        }
+        else
+        {
+            gameObject.GetComponent<MeshRenderer>().material = _materialInvincible;
+            gameObject.transform.position += new Vector3(0, 1, 0);
+            _isInvincible = true;
+        }
     }
 
     public bool GetCrate()

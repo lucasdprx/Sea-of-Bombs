@@ -174,6 +174,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &8036888
@@ -314,6 +315,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &28387329
@@ -454,6 +456,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &29503555
@@ -594,6 +597,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &50216660
@@ -734,6 +738,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &54952568
@@ -968,6 +973,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &88864224
@@ -1108,6 +1114,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &89418126
@@ -1248,6 +1255,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &117560835
@@ -1441,6 +1449,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &193219336
@@ -1581,6 +1590,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &208408314
@@ -1721,6 +1731,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &219083572
@@ -1861,6 +1872,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &226245722
@@ -2001,6 +2013,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &230437350
@@ -2141,6 +2154,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &235371695
@@ -2281,6 +2295,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &237270672
@@ -2456,6 +2471,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &262105439
@@ -2596,6 +2612,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &269881071
@@ -2736,6 +2753,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &298724575
@@ -2876,6 +2894,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &309407008
@@ -3016,6 +3035,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &321506835
@@ -8044,6 +8064,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &342953965
@@ -8184,6 +8205,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &360576254
@@ -8324,6 +8346,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &372653073
@@ -8464,6 +8487,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &416529936
@@ -8604,6 +8628,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &419051783
@@ -8744,6 +8769,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &427143504
@@ -8884,6 +8910,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &459059277
@@ -9024,6 +9051,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &464329153
@@ -9164,6 +9192,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &467414332
@@ -9304,6 +9333,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &476093751
@@ -9444,6 +9474,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &489447301
@@ -9584,6 +9615,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &489606725
@@ -9724,6 +9756,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &497416677
@@ -9864,6 +9897,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &518466443
@@ -10004,6 +10038,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &518815550
@@ -10144,6 +10179,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &534778006
@@ -10284,6 +10320,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &562205045
@@ -10424,6 +10461,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &610142904
@@ -10564,6 +10602,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &648644663
@@ -10704,6 +10743,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &655297192
@@ -10844,6 +10884,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &660545062
@@ -10984,6 +11025,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &678565097
@@ -11124,6 +11166,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &680547046
@@ -11264,6 +11307,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &692610858
@@ -11457,6 +11501,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &748481705
@@ -11597,6 +11642,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &770400806
@@ -11737,6 +11783,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &775037820
@@ -11877,6 +11924,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &782598600
@@ -12080,6 +12128,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &810617702
@@ -12220,6 +12269,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &820636947
@@ -12360,6 +12410,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &821553555
@@ -12500,6 +12551,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &873850350
@@ -12640,6 +12692,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &875895961
@@ -12780,6 +12833,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &910877631
@@ -12920,6 +12974,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &930787756
@@ -13060,6 +13115,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &931369041
@@ -13200,6 +13256,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &938651320
@@ -13340,6 +13397,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1000113922
@@ -13480,6 +13538,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1012778515
@@ -13620,6 +13679,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1051846517
@@ -13760,6 +13820,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1052112470
@@ -13900,6 +13961,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1060929644
@@ -14040,6 +14102,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1065485955
@@ -14180,6 +14243,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1081826528
@@ -14320,6 +14384,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1097107945
@@ -14460,6 +14525,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1133148446
@@ -14600,6 +14666,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1133310457
@@ -15075,6 +15142,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1217598477
@@ -15215,6 +15283,7 @@ MonoBehaviour:
   _coordinatesLength: L
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1219234166
@@ -15355,6 +15424,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1228150506
@@ -15495,6 +15565,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1242186614
@@ -15635,6 +15706,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1248982269
@@ -15775,6 +15847,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1284247182
@@ -15915,6 +15988,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1286560518
@@ -16055,6 +16129,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1303767238
@@ -16195,6 +16270,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1320796212
@@ -16335,6 +16411,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1340710053
@@ -16475,6 +16552,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1376492058
@@ -16615,6 +16693,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1419821205
@@ -16755,6 +16834,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1432242591
@@ -16895,6 +16975,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1437209060
@@ -17035,6 +17116,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1452640199
@@ -17175,6 +17257,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 2
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1462209246
@@ -17315,6 +17398,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1465617784
@@ -17455,6 +17539,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1477657379
@@ -17595,6 +17680,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1513341449
@@ -17735,6 +17821,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1519245698
@@ -17928,6 +18015,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1554313913
@@ -18068,6 +18156,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1567196726
@@ -18208,6 +18297,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1571421427
@@ -18521,6 +18611,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1622825811
@@ -18661,6 +18752,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1648309722
@@ -18801,6 +18893,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1683715162
@@ -18941,6 +19034,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1685955022
@@ -19081,6 +19175,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1689738930
@@ -19221,6 +19316,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 8
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1690531060
@@ -19361,6 +19457,7 @@ MonoBehaviour:
   _coordinatesLength: K
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1690805842
@@ -19501,6 +19598,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1733060227
@@ -19641,6 +19739,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1753015237
@@ -19781,6 +19880,7 @@ MonoBehaviour:
   _coordinatesLength: E
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1801378861
@@ -19921,6 +20021,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1822512515
@@ -20061,6 +20162,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1833343628
@@ -20201,6 +20303,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1851170010
@@ -20341,6 +20444,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1870871058
@@ -20481,6 +20585,7 @@ MonoBehaviour:
   _coordinatesLength: B
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1896223162
@@ -20621,6 +20726,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1901414735
@@ -20761,6 +20867,7 @@ MonoBehaviour:
   _coordinatesLength: C
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1905084902
@@ -20901,6 +21008,7 @@ MonoBehaviour:
   _coordinatesLength: I
   _coordinatesWidth: 7
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1930884684
@@ -21041,6 +21149,7 @@ MonoBehaviour:
   _coordinatesLength: H
   _coordinatesWidth: 5
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1939173686
@@ -21181,6 +21290,7 @@ MonoBehaviour:
   _coordinatesLength: A
   _coordinatesWidth: 6
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1947887497
@@ -21321,6 +21431,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 1
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1953400539
@@ -21656,6 +21767,7 @@ MonoBehaviour:
   _coordinatesLength: G
   _coordinatesWidth: 9
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &1971193392
@@ -21796,6 +21908,7 @@ MonoBehaviour:
   _coordinatesLength: J
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &1976373732
@@ -21936,6 +22049,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 3
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &2004781130
@@ -22076,6 +22190,7 @@ MonoBehaviour:
   _coordinatesLength: M
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 0
   _isCrate: 0
 --- !u!65 &2005593434
@@ -22216,6 +22331,7 @@ MonoBehaviour:
   _coordinatesLength: D
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &2032893530
@@ -22356,6 +22472,7 @@ MonoBehaviour:
   _coordinatesLength: F
   _coordinatesWidth: 4
   _material: {fileID: 2100000, guid: c30311005803c074d8c2361eac43d73d, type: 2}
+  _materialInvincible: {fileID: 2100000, guid: 3b6b1a4660d9b6844a408613ffd6cd1f, type: 2}
   _isInvincible: 1
   _isCrate: 0
 --- !u!65 &2058263964

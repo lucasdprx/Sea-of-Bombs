@@ -37,7 +37,7 @@ public class GridManager : MonoBehaviour
 
     IEnumerator MapRoutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         ReductionMap();
         StartCoroutine(MapRoutine());
     }
@@ -85,8 +85,20 @@ public class GridManager : MonoBehaviour
             }
             else 
                 _isBlock = true;
-            
+        }
+        SetPos();
+    }
 
+    private void SetPos()
+    {
+        for (int i = 0; cases.Count > i; i++)
+        {
+            int rand2 = Random.Range(0, cases.Count);
+            if (!cases[rand2]._isCrate && !cases[rand2]._isInvincible)
+            {
+                MovePlayer.Instance._ennemi.transform.position = cases[rand2].transform.position;
+                MovePlayer.Instance._ennemi.transform.position += new Vector3(0, 1, 0);
+            }
         }
     }
 

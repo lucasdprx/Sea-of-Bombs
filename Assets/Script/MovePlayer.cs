@@ -1,10 +1,11 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class MovePlayer : MonoBehaviour
 {
-    public GameObject _ennemi;
+    public List<GameObject> _ennemi = new();
     public NavMeshAgent _agent;
     private bool _wait;
     public Vector3 _initPos;
@@ -32,8 +33,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (_ennemi != null)
         {
-
-            ExplosionDamage(_agent.transform.position, .6f);
+            ExplosionDamage(_agent.transform.position, .55f);
         }      
     }
 
@@ -56,31 +56,28 @@ public class MovePlayer : MonoBehaviour
 
     private void Move()
     {
-        if (_ennemi != null)
-        {
-            if (!BOMB.Instance._isFlee)
-                _agent.SetDestination(_ennemi.transform.position);
-
-            if (Vector3.Distance(_ennemi.transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+        float dist = Vector3.Distance(_ennemi[0].transform.position, _agent.transform.position);
+        int indice = 0;
+        for (int i = 0;  i < _ennemi.Count; i++)
+        {    
+            if (_ennemi[i] != null)
             {
-                if (BOMB.Instance._nbBomb > 0)
-                    BOMB.Instance.SpawnBomb();
-                Flee();
+                float dist2 = Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position);
+                if (dist2 < dist)
+                {
+                    dist = dist2;
+                    indice = i;   
+                }
+                if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+                {
+                    if (BOMB.Instance._nbBomb > 0)
+                        BOMB.Instance.SpawnBomb();
+                    Flee();
+                }
+                if (!BOMB.Instance._isFlee)
+                    _agent.SetDestination(_ennemi[indice].transform.position);
             }
-        }      
-    }
-
-    private void SpawnBombWall()
-    {
-        for (int i = 0; i < GridManager.Instance._centerCases.Count; i++)
-        {
-            if (GridManager.Instance._centerCases[i]._isCrate && Vector3.Distance(GridManager.Instance._centerCases[i].transform.position, _agent.transform.position) <= 1.0f)
-            {
-                Flee();
-                BOMB.Instance.SpawnBomb();
-                return;
-            }
-        }
+        }          
     }
 
     public void ExplosionDamage(Vector3 center, float radius)

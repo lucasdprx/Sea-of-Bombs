@@ -34,7 +34,6 @@ public class Case : MonoBehaviour
 
     public void SetCrate()
     {
-        Debug.Log("Crate");
         gameObject.GetComponent<MeshRenderer>().material = _material;
         gameObject.transform.position += new Vector3(0,1,0);
         gameObject.GetComponent<NavMeshObstacle>().carving = true;

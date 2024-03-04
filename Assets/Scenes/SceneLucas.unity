@@ -10823,7 +10823,7 @@ Transform:
   m_GameObject: {fileID: 660545059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 2.9799998}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14889,7 +14889,7 @@ MonoBehaviour:
   - {fileID: 1065485954}
   - {fileID: 1242186613}
   - {fileID: 1000113921}
-  _crateCount: 30
+  _crateCount: 40
   _borderCases: []
   _centerCases: []
 --- !u!4 &1198064244
@@ -18394,7 +18394,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000002
-  m_Speed: 2.5
+  m_Speed: 3
   m_Acceleration: 999
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -21602,8 +21602,9 @@ MonoBehaviour:
   bal: {fileID: 0}
   _explosion: 0
   _particle: {fileID: 324361126}
+  _rangeBomb: 4
   _material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  _nbBomb: 6
+  _nbBomb: 99
 --- !u!1 &1971193389
 GameObject:
   m_ObjectHideFlags: 0
@@ -22529,13 +22530,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139400986}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2771291, y: -0, z: -0, w: 0.9608327}
+  m_LocalRotation: {x: 0.36487678, y: 0, z: 0, w: 0.93105584}
   m_LocalPosition: {x: 0, y: 11.7, z: -13.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 32.178, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 42.8, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

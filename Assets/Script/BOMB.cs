@@ -11,6 +11,7 @@ public class BOMB : MonoBehaviour
     [HideInInspector] public GameObject bal;
     [HideInInspector] public bool _explosion;
     public ParticleSystem _particle;
+    public float _rangeBomb = 4.0f;
 
     public Material _material;
 
@@ -54,7 +55,7 @@ public class BOMB : MonoBehaviour
     {
         for (int i = 0; i < GridManager.Instance._centerCases.Count; i++)
         {
-            if (GridManager.Instance._centerCases[i]._isCrate && Vector3.Distance(GridManager.Instance._centerCases[i].transform.position, bal.transform.position) <= 4)
+            if (GridManager.Instance._centerCases[i]._isCrate && Vector3.Distance(GridManager.Instance._centerCases[i].transform.position, bal.transform.position) <= _rangeBomb)
             {
                 GridManager.Instance._centerCases[i]._isCrate = false;
                 GridManager.Instance._centerCases[i].transform.position -= new Vector3(0, 1, 0);

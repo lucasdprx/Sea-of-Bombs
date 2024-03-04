@@ -31,5 +31,10 @@ public class Move_Ennemi : MonoBehaviour
                 Destroy(gameObject);
             BOMB.Instance._explosion = false;
         }
+        if (Vector3.Distance(_ennemi.transform.position, _agent.transform.position) <= 1)
+        {
+            Destroy(_ennemi);
+            print("Lose");
+        }
     }
 }

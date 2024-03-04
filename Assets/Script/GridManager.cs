@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,12 @@ public class GridManager : MonoBehaviour
 
 
     [SerializeField] private int _crateCount;
+    [SerializeField] private int _playerSpawnCount;
+    [SerializeField] private int _mobSpawnCount;
 
     private int _total;
     private int _totalBase;
+    private int _reduction;
 
     public List<Case> _borderCases;
     public List<Case> _centerCases;
@@ -20,15 +24,30 @@ public class GridManager : MonoBehaviour
     {
         Instance = this;
     }
-
     private void Start()
     {
         SetBorderList();
 
-        _total = _crateCount;
+        _total = _crateCount + _playerSpawnCount + _mobSpawnCount;
         InvestmentElement();
+        StartCoroutine(MapRoutine());
     }
 
+    IEnumerator MapRoutine()
+    {
+        yield return new WaitForSeconds(5f);
+        ReductionMap();
+        StartCoroutine(MapRoutine());
+    }
+    public void ReductionMap()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            cases[i + 9 * _reduction].SetInvincible();
+            cases[cases.Count - 1 - ( i + 9 * _reduction)].SetInvincible();
+        }
+        _reduction++;
+    }
 
     public void SetBorderList()
     {

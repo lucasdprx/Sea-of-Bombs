@@ -26,13 +26,14 @@ public class MovePlayer : MonoBehaviour
             StartCoroutine(wait(1.0f));
         }
         _initPos = _agent.transform.position;
+        StartCoroutine(FollowEnnemi(0.3f));
     }
     private void Update()
     {
         if (_ennemi != null)
         {
-            Move();
-            SpawnBombWall();
+
+            ExplosionDamage(_agent.transform.position, 10f);
         }      
     }
 
@@ -41,7 +42,12 @@ public class MovePlayer : MonoBehaviour
         yield return new WaitForSeconds(second);
         _wait = true;
     }
-
+    IEnumerator FollowEnnemi(float second)
+    {
+        yield return new WaitForSeconds(second);
+        Move();
+        StartCoroutine(FollowEnnemi(0.3f));
+    }
     private void Flee()
     {
         _agent.SetDestination(_initPos);
@@ -71,6 +77,15 @@ public class MovePlayer : MonoBehaviour
                 BOMB.Instance.SpawnBomb();
                 return;
             }
+        }
+    }
+
+    public void ExplosionDamage(Vector3 center, float radius)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        foreach (var hitCollider in hitColliders)
+        {
+            print(hitCollider);
         }
     }
 }

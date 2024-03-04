@@ -13,6 +13,8 @@ public class Case : MonoBehaviour
     public static Case Instance;
     public bool _isInvincible;
     public bool _isCrate;
+    public bool _isPlayerSpawn;
+    public bool _isMobSpawn;
 
     private void Awake()
     {

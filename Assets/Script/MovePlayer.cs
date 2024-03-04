@@ -33,7 +33,7 @@ public class MovePlayer : MonoBehaviour
         if (_ennemi != null)
         {
 
-            ExplosionDamage(_agent.transform.position, 10f);
+            ExplosionDamage(_agent.transform.position, .6f);
         }      
     }
 
@@ -56,15 +56,18 @@ public class MovePlayer : MonoBehaviour
 
     private void Move()
     {
-        if (!BOMB.Instance._isFlee)
-            _agent.SetDestination(_ennemi.transform.position);
-
-        if (Vector3.Distance(_ennemi.transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+        if (_ennemi != null)
         {
-            if (BOMB.Instance._nbBomb > 0)
-                BOMB.Instance.SpawnBomb();
-            Flee();
-        }
+            if (!BOMB.Instance._isFlee)
+                _agent.SetDestination(_ennemi.transform.position);
+
+            if (Vector3.Distance(_ennemi.transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+            {
+                if (BOMB.Instance._nbBomb > 0)
+                    BOMB.Instance.SpawnBomb();
+                Flee();
+            }
+        }      
     }
 
     private void SpawnBombWall()
@@ -85,7 +88,12 @@ public class MovePlayer : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(center, radius);
         foreach (var hitCollider in hitColliders)
         {
-            print(hitCollider);
+            if (hitCollider.GetComponent<Case>() != null)
+                if (hitCollider.GetComponent<Case>()._isCrate && !BOMB.Instance._isFlee)
+                {
+                    BOMB.Instance.SpawnBomb();
+                    Flee();
+                }
         }
     }
 }

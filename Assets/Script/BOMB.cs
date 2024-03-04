@@ -54,7 +54,6 @@ public class BOMB : MonoBehaviour
     {
         for (int i = 0; i < GridManager.Instance._centerCases.Count; i++)
         {
-            print(Vector3.Distance(GridManager.Instance._centerCases[i].transform.position, bal.transform.position));
             if (GridManager.Instance._centerCases[i]._isCrate && Vector3.Distance(GridManager.Instance._centerCases[i].transform.position, bal.transform.position) <= 4)
             {
                 GridManager.Instance._centerCases[i]._isCrate = false;

@@ -15300,7 +15300,7 @@ MonoBehaviour:
   - {fileID: 1065485954}
   - {fileID: 1242186613}
   - {fileID: 1000113921}
-  _crateCount: 10
+  _crateCount: 30
   _playerSpawnCount: 0
   _mobSpawnCount: 0
   _borderCases: []

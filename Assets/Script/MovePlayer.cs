@@ -31,7 +31,7 @@ public class MovePlayer : MonoBehaviour
         if (_ennemi != null)
             ExplosionDamage(_agent.transform.position, .55f);
 
-        Bomb();
+        Kill();
     }
 
     IEnumerator wait(float second)
@@ -86,7 +86,7 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    public void Bomb()
+    public void Kill()
     {
         for (int i = 0; i < _ennemi.Count; ++i)
         {
@@ -97,5 +97,10 @@ public class MovePlayer : MonoBehaviour
                 Flee();
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print(other.gameObject);
     }
 }

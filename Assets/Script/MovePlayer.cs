@@ -30,6 +30,8 @@ public class MovePlayer : MonoBehaviour
     {
         if (_ennemi != null)
             ExplosionDamage(_agent.transform.position, .55f);
+
+        Bomb();
     }
 
     IEnumerator wait(float second)
@@ -52,37 +54,22 @@ public class MovePlayer : MonoBehaviour
 
     private void Move()
     {
-        float dist = Vector3.Distance(_ennemi[0].transform.position, _agent.transform.position);
+        float dist = 9999;
         int indice = 0;
+
         for (int i = 0;  i < _ennemi.Count; i++)
-        {    
+        {
             if (_ennemi[i] != null)
             {
-                float dist2 = Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position);
-                if (dist2 < dist)
+                if (dist > Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position))
                 {
-                    dist = dist2;
-                    indice = i;   
+                    dist = Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position);
+                    indice = i;
                 }
-                if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
-                {
-                    if (BOMB.Instance._nbBomb > 0)
-                        BOMB.Instance.SpawnBomb();
-                    Flee();
-                }
-                if (!BOMB.Instance._isFlee)
-                    _agent.SetDestination(_ennemi[indice].transform.position);
             }
-            else
-            {
-                for (int k = 0;  k < _ennemi.Count; k++)
-                {
-                    if (_ennemi[k] != null)
-                        _agent.SetDestination(_ennemi[indice].transform.position);
-                }
-                return;
-            }
-        }          
+        }
+        if (!BOMB.Instance._isFlee)
+            _agent.SetDestination(_ennemi[indice].transform.position);        
     }
 
     public void ExplosionDamage(Vector3 center, float radius)
@@ -96,6 +83,19 @@ public class MovePlayer : MonoBehaviour
                     BOMB.Instance.SpawnBomb();
                     Flee();
                 }
+        }
+    }
+
+    public void Bomb()
+    {
+        for (int i = 0; i < _ennemi.Count; ++i)
+        {
+            if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+            {
+                if (BOMB.Instance._nbBomb > 0)
+                    BOMB.Instance.SpawnBomb();
+                Flee();
+            }
         }
     }
 }

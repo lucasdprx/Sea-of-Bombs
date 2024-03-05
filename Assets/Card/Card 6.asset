@@ -15,6 +15,7 @@ MonoBehaviour:
   _bomb: 1
   _hp: 2
   _description: You gain 3 bomb
-  _cardImage: {fileID: 21300000, guid: b993f65f456553b4dad0a0bbc1813600, type: 3}
-  _cardImageDos: {fileID: 21300000, guid: a8d23825432afcd409dbee8178a68aeb, type: 3}
+  _image: {fileID: 0}
+  _imageDos: {fileID: 0}
   _name: Bomb
+  _prestige: 1

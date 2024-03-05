@@ -35,7 +35,7 @@ public class GridManager : MonoBehaviour
 
     IEnumerator MapRoutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(35f);
         ReductionMap();
         StartCoroutine(MapRoutine());
     }

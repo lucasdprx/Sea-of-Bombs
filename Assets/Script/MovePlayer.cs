@@ -13,9 +13,7 @@ public class MovePlayer : MonoBehaviour
     private void Awake()
     {
         if (Instance != null)
-        {
             Destroy(Instance);
-        }
 
         Instance = this;
     }
@@ -23,18 +21,15 @@ public class MovePlayer : MonoBehaviour
     private void Start()
     {
         if (!_wait)
-        {
             StartCoroutine(wait(1.0f));
-        }
+        
         _initPos = _agent.transform.position;
         StartCoroutine(FollowEnnemi(0.3f));
     }
     private void Update()
     {
         if (_ennemi != null)
-        {
             ExplosionDamage(_agent.transform.position, .55f);
-        }      
     }
 
     IEnumerator wait(float second)
@@ -45,7 +40,8 @@ public class MovePlayer : MonoBehaviour
     IEnumerator FollowEnnemi(float second)
     {
         yield return new WaitForSeconds(second);
-        Move();
+        if (!Move_Ennemi.Instance.IsAllDead())
+            Move();
         StartCoroutine(FollowEnnemi(0.3f));
     }
     private void Flee()
@@ -76,6 +72,15 @@ public class MovePlayer : MonoBehaviour
                 }
                 if (!BOMB.Instance._isFlee)
                     _agent.SetDestination(_ennemi[indice].transform.position);
+            }
+            else
+            {
+                for (int k = 0;  k < _ennemi.Count; k++)
+                {
+                    if (_ennemi[k] != null)
+                        _agent.SetDestination(_ennemi[indice].transform.position);
+                }
+                return;
             }
         }          
     }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Move_Ennemi : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Move_Ennemi : MonoBehaviour
     [HideInInspector] public Vector3 _initPos;
     [HideInInspector] public Vector3 _posBomb;
     public static Move_Ennemi Instance;
+    private int _nbDeath;
 
     private void Awake()
     {
@@ -26,13 +28,18 @@ public class Move_Ennemi : MonoBehaviour
     void Update()
     {
         MoveEnnemi();
+
+        if (IsAllDead())
+        {
+            SceneManager.LoadScene("Shop");
+        }
     }
 
-    private bool IsAllDead()
+    public bool IsAllDead()
     {
         for (int i = 0; i < _agent.Count;i++)
         {
-            if (_agent[i].gameObject != null)
+            if (_agent[i] != null)
                 return false;
         }
         return true;
@@ -49,14 +56,15 @@ public class Move_Ennemi : MonoBehaviour
                 {
                     Destroy(_ennemi);
                     print("Lose");
+                    SceneManager.LoadScene("Shop");
                 }
                 if (BOMB.Instance._explosion)
                 {
                     if (Vector3.Distance(_posBomb, _agent[i].transform.position) <= 2.5)
                     {
                         Destroy(_agent[i].gameObject);
-                        if (IsAllDead())
-                            print("Win");
+                        _agent.RemoveAt(i);
+                        MovePlayer.Instance._ennemi.RemoveAt(i);
                         continue;
                     }
                     BOMB.Instance._explosion = false;

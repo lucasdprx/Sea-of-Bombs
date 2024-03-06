@@ -62,13 +62,12 @@ public class Move_Ennemi : MonoBehaviour
                     if (Vector3.Distance(_posBomb, _agent[i].transform.position) <= 2.5)
                     {
                         Destroy(_agent[i].gameObject);
-                        _agent.RemoveAt(i);
-                        MovePlayer.Instance._ennemi.RemoveAt(i);
+                        Destroy(MovePlayer.Instance._ennemi[i]);
                         continue;
                     }
-                    BOMB.Instance._explosion = false;
                 }
             }
         }
+        BOMB.Instance._explosion = false;
     }
 }

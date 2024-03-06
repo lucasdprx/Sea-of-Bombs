@@ -90,12 +90,13 @@ public class MovePlayer : MonoBehaviour
     {
         for (int i = 0; i < _ennemi.Count; ++i)
         {
-            if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
-            {
-                if (BOMB.Instance._nbBomb > 0)
-                    BOMB.Instance.SpawnBomb();
-                Flee();
-            }
+            if (_ennemi[i] != null)
+                if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+                {
+                    if (BOMB.Instance._nbBomb > 0)
+                        BOMB.Instance.SpawnBomb();
+                    Flee();
+                }
         }
     }
 }

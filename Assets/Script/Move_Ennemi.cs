@@ -55,7 +55,6 @@ public class Move_Ennemi : MonoBehaviour
                 if (Vector3.Distance(_ennemi.transform.position, _agent[i].transform.position) <= 1)
                 {
                     Destroy(_ennemi);
-                    print("Lose");
                     SceneManager.LoadScene("Shop");
                 }
                 if (BOMB.Instance._explosion)

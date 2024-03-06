@@ -98,9 +98,4 @@ public class MovePlayer : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print(other.gameObject);
-    }
 }

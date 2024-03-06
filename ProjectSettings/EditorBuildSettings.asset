@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiseEnCommun.unity
     guid: 48ac64952a953e541976a86f7e5beee5
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: b17da0e65efd51c4b98f0231df82d692
+  - enabled: 1
+    path: Assets/Scenes/SceneLucas.unity
+    guid: c329575069348b04a8cdc596837ec4ba
   m_configObjects: {}

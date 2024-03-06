@@ -1,7 +1,5 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class BOMB : MonoBehaviour
 {
@@ -48,7 +46,7 @@ public class BOMB : MonoBehaviour
         Destroy(bal);
         _isFlee = false;
         _explosion = true;
-        _particle.Play();    
+        _particle.Play();
     }
 
     private void BreakWall()

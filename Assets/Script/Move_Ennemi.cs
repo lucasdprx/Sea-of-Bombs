@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,13 @@ public class Move_Ennemi : MonoBehaviour
     [HideInInspector] public Vector3 _posBomb;
     public static Move_Ennemi Instance;
     public int _speedEnnemi;
+
+    public int _wave = 1;
+
+    public TextMeshProUGUI _textHp;
+
+    public GameObject _uiDefeat;
+    public TextMeshProUGUI _textDefeat;
 
     private void Awake()
     {
@@ -28,6 +36,7 @@ public class Move_Ennemi : MonoBehaviour
         {
             _agent[i].speed += _speedEnnemi;
         }
+        _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
     }
     void Update()
     {
@@ -35,6 +44,9 @@ public class Move_Ennemi : MonoBehaviour
 
         if (IsAllDead())
         {
+            _wave += 1;
+            PlayerPrefs.SetInt("Wave", _wave);
+            PlayerPrefs.SetInt("nbGold", PlayerPrefs.GetInt("nbGold") + 3);
             SceneManager.LoadScene("Shop");
         }
     }
@@ -59,10 +71,14 @@ public class Move_Ennemi : MonoBehaviour
                 if (Vector3.Distance(_ennemi.transform.position, _agent[i].transform.position) <= 1)
                 {
                     Destroy(_ennemi);
+                    _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
                     if (PlayerPrefs.GetInt("nbHp") <= 0)
                     {
                         PlayerPrefs.DeleteAll();
-                        Debug.Log("Load scene ui defaite");
+                        _uiDefeat.SetActive(true);
+                        _textDefeat.text = "Vous n'avez plus de point de vie";
+                        BOMB.Instance._textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
+                        Time.timeScale = 0.0f;
                     }
                     else
                     {

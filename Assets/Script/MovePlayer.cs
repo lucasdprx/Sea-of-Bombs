@@ -58,6 +58,7 @@ public class MovePlayer : MonoBehaviour
     private void Flee()
     {
         _agent.SetDestination(_initPos);
+        _agent.transform.LookAt(_initPos);
         BOMB.Instance._isFlee = true;
     }
 

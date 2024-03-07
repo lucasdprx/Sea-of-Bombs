@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class BOMB : MonoBehaviour
@@ -14,6 +15,8 @@ public class BOMB : MonoBehaviour
     public Material _material;
 
     public int _nbBomb;
+    public TextMeshProUGUI _textBomb;
+    public TextMeshProUGUI _textWave;
 
     private void Awake()
     {
@@ -28,19 +31,28 @@ public class BOMB : MonoBehaviour
     private void Start()
     {
         _nbBomb = PlayerPrefs.GetInt("nbBomb");
+        _textBomb.text = PlayerPrefs.GetInt("nbBomb").ToString();
     }
 
     private void Update()
     {
         if (bal != null)    
             _particle.transform.position = bal.transform.position;
+
+        if (_textBomb.text == "0" && !Move_Ennemi.Instance.IsAllDead())
+        {
+            Move_Ennemi.Instance._uiDefeat.SetActive(true);
+            Move_Ennemi.Instance._textDefeat.text = "Vous n'avez plus de bombe";
+            _textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
+            Time.timeScale = 0.0f;
+            PlayerPrefs.DeleteAll();
+            _textBomb.text = "1";
+        }
     }
 
     public void SpawnBomb()
     {
         bal = Instantiate(bombObject, gameObject.transform.position, Quaternion.identity);
-        _nbBomb -= 1;
-        PlayerPrefs.SetInt("nbBomb", _nbBomb);
         StartCoroutine(TimeBomb(2));
     }
 
@@ -52,6 +64,10 @@ public class BOMB : MonoBehaviour
         Destroy(bal);
         _isFlee = false;
         _explosion = true;
+        _nbBomb -= 1;
+        MovePlayer.Instance._agent.transform.LookAt(new Vector3(0, 0, 4));
+        PlayerPrefs.SetInt("nbBomb", _nbBomb);
+        _textBomb.text = PlayerPrefs.GetInt("nbBomb").ToString();
         _particle.Play();
     }
 

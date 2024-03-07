@@ -85,7 +85,7 @@ public class Card : MonoBehaviour
 
     public void Upgrade()
     {
-        if (PlayerPrefs.GetInt("nbGold") >= 8)
+        if (PlayerPrefs.GetInt("nbGold") >= 4)
         {
             CardEffect.instance._nbGold -= 8;
             _prestige++;

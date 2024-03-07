@@ -19,6 +19,7 @@ public class CardEffect : MonoBehaviour
     public TextMeshProUGUI _textGold;
     public TextMeshProUGUI _textHp;
     public TextMeshProUGUI _textBomb;
+    public TextMeshProUGUI _textWave;
 
     private void Awake()
     {
@@ -35,6 +36,8 @@ public class CardEffect : MonoBehaviour
 
         _hp = PlayerPrefs.GetInt("nbHp");
         _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
+
+        _textWave.text = "Wave  " + PlayerPrefs.GetInt("Wave").ToString();
     }
     public void Card1()
     {

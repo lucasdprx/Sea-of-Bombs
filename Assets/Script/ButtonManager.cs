@@ -28,15 +28,17 @@ public class ButtonManager : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Shop");
-        PlayerPrefs.SetInt("nbBomb", 8);
+        PlayerPrefs.SetInt("nbBomb", 10);
         PlayerPrefs.SetInt("nbGold", 5);
         PlayerPrefs.SetInt("nbHp", 3);
         PlayerPrefs.SetInt("Speed", 0);
         PlayerPrefs.SetInt("SpeedEnnemi", 0);
+        PlayerPrefs.SetInt("Wave", 1);
         Time.timeScale = 1.0f;
     }
     public void MainMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
     }
     public void PauseMenu()

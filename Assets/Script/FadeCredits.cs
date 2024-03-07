@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class FadeCredits : MonoBehaviour
 {
@@ -30,9 +29,10 @@ public class FadeCredits : MonoBehaviour
 
     private IEnumerator StartFadeSequence()
     {
+        StartCoroutine(FadeSequence());
         yield return new WaitForSeconds(m_WaitBeforeStart);
 
-        StartCoroutine(FadeSequence());
+
     }
     private IEnumerator FadeSequence()
     {

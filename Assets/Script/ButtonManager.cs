@@ -25,11 +25,12 @@ public class ButtonManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("MiseEnCommun");
         Time.timeScale = 1.0f;
+        SceneManager.LoadScene("MiseEnCommun");
     }
     public void MainMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
     }
     public void PauseMenu()
@@ -104,6 +105,7 @@ public class ButtonManager : MonoBehaviour
             _optionActive = false;
         }
     }
+
     public void OptionMenuGamePause()
     {
         if (!_optionActive)

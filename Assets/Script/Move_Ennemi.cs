@@ -10,7 +10,7 @@ public class Move_Ennemi : MonoBehaviour
     [HideInInspector] public Vector3 _initPos;
     [HideInInspector] public Vector3 _posBomb;
     public static Move_Ennemi Instance;
-    private int _nbDeath;
+    public int _speedEnnemi;
 
     private void Awake()
     {
@@ -23,7 +23,11 @@ public class Move_Ennemi : MonoBehaviour
     }
     private void Start()
     {
-        //_initPos = _agent.transform.position;
+        _speedEnnemi = PlayerPrefs.GetInt("SpeedEnnemi");
+        for (int i = 0; i < _agent.Count; i++)
+        {
+            _agent[i].speed += _speedEnnemi;
+        }
     }
     void Update()
     {
@@ -31,6 +35,7 @@ public class Move_Ennemi : MonoBehaviour
 
         if (IsAllDead())
         {
+            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("Shop");
         }
     }
@@ -55,6 +60,7 @@ public class Move_Ennemi : MonoBehaviour
                 if (Vector3.Distance(_ennemi.transform.position, _agent[i].transform.position) <= 1)
                 {
                     Destroy(_ennemi);
+                    PlayerPrefs.DeleteAll();
                     SceneManager.LoadScene("Shop");
                 }
                 if (BOMB.Instance._explosion)

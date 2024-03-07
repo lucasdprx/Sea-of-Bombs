@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Card 1
   m_EditorClassIdentifier: 
   _bomb: 1
-  _hp: 2
+  _hp: 0
+  _speed: 0
+  _price: 1
   _description: You gain 1 bomb
   _image: {fileID: 0}
   _imageDos: {fileID: 0}

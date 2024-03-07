@@ -13,7 +13,7 @@ public class BOMB : MonoBehaviour
 
     public Material _material;
 
-    public int _nbBomb = 3;
+    public int _nbBomb;
 
     private void Awake()
     {
@@ -23,6 +23,11 @@ public class BOMB : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void Start()
+    {
+        _nbBomb = PlayerPrefs.GetInt("nbBomb", 20);
     }
 
     private void Update()

@@ -25,7 +25,7 @@ public class ButtonManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("MiseEnCommun");
+        SceneManager.LoadScene("Shop");
         Time.timeScale = 1.0f;
     }
     public void MainMenu()

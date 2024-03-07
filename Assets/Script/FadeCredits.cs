@@ -29,9 +29,10 @@ public class FadeCredits : MonoBehaviour
 
     private IEnumerator StartFadeSequence()
     {
+        StartCoroutine(FadeSequence());
         yield return new WaitForSeconds(m_WaitBeforeStart);
 
-        StartCoroutine(FadeSequence());
+
     }
     private IEnumerator FadeSequence()
     {

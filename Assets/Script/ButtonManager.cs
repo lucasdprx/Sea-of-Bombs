@@ -25,8 +25,8 @@ public class ButtonManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("SceneLucas");
-        Time.timeScale = 1f;
+        SceneManager.LoadScene("MiseEnCommun");
+        Time.timeScale = 1.0f;
     }
     public void MainMenu()
     {
@@ -38,11 +38,13 @@ public class ButtonManager : MonoBehaviour
         {
             GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(true);
             _pauseActive = true;
+            Time.timeScale = 0.0f;
         }
         else
         {
             GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(false);
             _pauseActive = false;
+            Time.timeScale = 1.0f;
         }
     }
     public void EndMenu()
@@ -51,6 +53,7 @@ public class ButtonManager : MonoBehaviour
         {
             GameObject.Find("MenuManager").transform.Find("EndMenu").gameObject.SetActive(true);
             _endActive = true;
+            Time.timeScale = 0.0f;
             if (_isVictory)
             {
                 GameObject.Find("MenuManager").transform.Find("VictoryTextTop").gameObject.SetActive(true);
@@ -66,6 +69,7 @@ public class ButtonManager : MonoBehaviour
         {
             GameObject.Find("MenuManager").transform.Find("EndMenu").gameObject.SetActive(false);
             _endActive = false;
+            Time.timeScale = 0.0f;
             if (!_isVictory)
             {
                 GameObject.Find("MenuManager").transform.Find("VictoryTextTop").gameObject.SetActive(false);
@@ -100,6 +104,22 @@ public class ButtonManager : MonoBehaviour
             _optionActive = false;
         }
     }
+    public void OptionMenuGamePause()
+    {
+        if (!_optionActive)
+        {
+            GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(true);
+            GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(false);
+            _optionActive = true;
+        }
+        else
+        {
+            GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(false);
+            GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(true);
+            _optionActive = false;
+        }
+    }
+
 
 
     public void Credit()

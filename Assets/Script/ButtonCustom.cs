@@ -11,15 +11,13 @@ public class ButtonCustom : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public bool _interactableImage = false;
 
 
-    [Header("Sprites")]
-    [SerializeField] private Sprite _disable;
-    private Sprite m_enable;
-
     [Header("Colors")]
     [SerializeField] private Color _enterColor;
     [SerializeField] private Color _enterColorImage;
     [SerializeField] private Color _exitColor;
+    [SerializeField] private Color _exitColorImage;
     [SerializeField] private Color _clickColor;
+    [SerializeField] private Color _clickColorImage;
 
     [Space(15)]
     [FormerlySerializedAs("onClick")]
@@ -32,15 +30,6 @@ public class ButtonCustom : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [Space(15)]
     [FormerlySerializedAs("onExit")]
     [SerializeField] private ButtonClickedEvent _onExit = new ButtonClickedEvent();
-    private void Start()
-    {
-        m_enable = GetComponent<Image>().sprite;
-    }
-
-    private void Update()
-    {
-        Interactable();
-    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -70,7 +59,7 @@ public class ButtonCustom : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             _onExit.Invoke();
             if (GetComponentInChildren<Image>() != null)
-                GetComponentInChildren<Image>().color = _exitColor;
+                GetComponentInChildren<Image>().color = _exitColorImage;
         }
     }
 
@@ -82,13 +71,10 @@ public class ButtonCustom : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             if (GetComponentInChildren<TMP_Text>() != null)
                 GetComponentInChildren<TMP_Text>().color = _clickColor;
         }
-    }
-
-    private void Interactable()
-    {
-        if (!_interactable)
-            GetComponent<Image>().sprite = _disable;
-        else
-            GetComponent<Image>().sprite = m_enable;
+        if (_interactableImage)
+        {
+            if (GetComponentInChildren<Image>() != null)
+                GetComponentInChildren<Image>().color = _clickColorImage;
+        }
     }
 }

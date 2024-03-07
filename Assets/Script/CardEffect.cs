@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class CardEffect : MonoBehaviour
@@ -15,9 +13,12 @@ public class CardEffect : MonoBehaviour
     public int _speed;
     public int _speedEnnemi;
     public List<bool> _button = new();
+    public List<Button> _buttonColor = new();
     public static CardEffect instance;
 
     public TextMeshProUGUI _textGold;
+    public TextMeshProUGUI _textHp;
+    public TextMeshProUGUI _textBomb;
 
     private void Awake()
     {
@@ -28,6 +29,12 @@ public class CardEffect : MonoBehaviour
     {
         _nbGold = PlayerPrefs.GetInt("nbGold");
         _textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
+
+        _nbBomb = PlayerPrefs.GetInt("nbBomb");
+        _textBomb.text = PlayerPrefs.GetInt("nbBomb").ToString();
+
+        _hp = PlayerPrefs.GetInt("nbHp");
+        _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
     }
     public void Card1()
     {
@@ -35,6 +42,10 @@ public class CardEffect : MonoBehaviour
         {
             AddStats(0);
             _button[0] = false;
+            ColorBlock colorVar = _buttonColor[0].colors;
+            colorVar.normalColor = new Color(0.35f, 0.35f, 0.35f, 0.4f);
+            colorVar.highlightedColor = new Color(0.35f, 0.35f, 0.35f, 0.4f);
+            _buttonColor[0].colors = colorVar;
         } 
     }
     public void Card2()
@@ -43,6 +54,10 @@ public class CardEffect : MonoBehaviour
         {
             AddStats(1);
             _button[1] = false;
+            ColorBlock colorVar = _buttonColor[1].colors;
+            colorVar.normalColor = new Color(0.35f, 0.35f, 0.35f, 0.4f);
+            colorVar.highlightedColor = new Color(0.35f, 0.35f, 0.35f, 0.4f);
+            _buttonColor[1].colors = colorVar;
         }
     }
     public void Card3()
@@ -51,6 +66,10 @@ public class CardEffect : MonoBehaviour
         {
             AddStats(2);
             _button[2] = false;
+            ColorBlock colorVar = _buttonColor[2].colors;
+            colorVar.normalColor = new Color(0.35f, 0.35f, 0.35f, 0.4f);
+            colorVar.highlightedColor = new Color(0.35f, 0.35f, 0.35f, 0.4f);
+            _buttonColor[2].colors = colorVar;
         }
     }
 
@@ -59,7 +78,10 @@ public class CardEffect : MonoBehaviour
         if (gameObject.GetComponent<Card>()._cardShow[nbCard]._speed < 0)
         {
             _speedEnnemi += gameObject.GetComponent<Card>()._cardShow[nbCard]._speed;
+            _nbGold -= gameObject.GetComponent<Card>()._cardShow[nbCard]._price;
             PlayerPrefs.SetInt("SpeedEnnemi", _speedEnnemi);
+            PlayerPrefs.SetInt("nbGold", _nbGold);
+            _textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
         }
         else
         {
@@ -72,6 +94,8 @@ public class CardEffect : MonoBehaviour
             PlayerPrefs.SetInt("nbGold", _nbGold);
             PlayerPrefs.SetInt("Speed", _speed);
             _textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
+            _textBomb.text = PlayerPrefs.GetInt("nbBomb").ToString();
+            _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
         }
     }
 

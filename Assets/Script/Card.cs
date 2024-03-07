@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class Card : MonoBehaviour
     public List<TextMeshProUGUI> _textTitle = new();
     public List<TextMeshProUGUI> _textPrice = new();
     private int _prestige = 1;
+
+    public static Card instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -59,6 +67,14 @@ public class Card : MonoBehaviour
             CardEffect.instance._nbGold -= 2;
             PlayerPrefs.SetInt("nbGold", CardEffect.instance._nbGold);
             CardEffect.instance._textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
+
+            for (int i = 0; i < 3 ; i++)
+            {
+                ColorBlock colorVar = CardEffect.instance._buttonColor[i].colors;
+                colorVar.normalColor = new Color(1f, 1f, 1f, 0f);
+                colorVar.highlightedColor = new Color(1f, 230f / 255f, 0f, 70f / 255f);
+                CardEffect.instance._buttonColor[i].colors = colorVar;
+            }
         } 
     }
 

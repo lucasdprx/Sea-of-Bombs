@@ -1,10 +1,5 @@
-using JetBrains.Annotations;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -17,6 +12,13 @@ public class ButtonManager : MonoBehaviour
     private bool _isDefeat;
 
     [SerializeField] private Animator _animator;
+
+    public static ButtonManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         //_audioSource.Play();
@@ -26,6 +28,11 @@ public class ButtonManager : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Shop");
+        PlayerPrefs.SetInt("nbBomb", 8);
+        PlayerPrefs.SetInt("nbGold", 5);
+        PlayerPrefs.SetInt("nbHp", 3);
+        PlayerPrefs.SetInt("Speed", 0);
+        PlayerPrefs.SetInt("SpeedEnnemi", 0);
         Time.timeScale = 1.0f;
     }
     public void MainMenu()
@@ -142,6 +149,7 @@ public class ButtonManager : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.DeleteAll();
         Application.Quit();
     }
 }

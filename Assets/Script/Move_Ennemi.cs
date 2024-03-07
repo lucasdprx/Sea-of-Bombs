@@ -35,7 +35,6 @@ public class Move_Ennemi : MonoBehaviour
 
         if (IsAllDead())
         {
-            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("Shop");
         }
     }
@@ -60,8 +59,16 @@ public class Move_Ennemi : MonoBehaviour
                 if (Vector3.Distance(_ennemi.transform.position, _agent[i].transform.position) <= 1)
                 {
                     Destroy(_ennemi);
-                    PlayerPrefs.DeleteAll();
-                    SceneManager.LoadScene("Shop");
+                    if (PlayerPrefs.GetInt("nbHp") <= 0)
+                    {
+                        PlayerPrefs.DeleteAll();
+                        Debug.Log("Load scene ui defaite");
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt("nbHp", PlayerPrefs.GetInt("nbHp") - 1);
+                        SceneManager.LoadScene("Shop");
+                    } 
                 }
                 if (BOMB.Instance._explosion)
                 {

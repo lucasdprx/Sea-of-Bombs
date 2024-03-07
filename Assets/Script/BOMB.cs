@@ -27,7 +27,7 @@ public class BOMB : MonoBehaviour
 
     private void Start()
     {
-        _nbBomb = PlayerPrefs.GetInt("nbBomb", 20);
+        _nbBomb = PlayerPrefs.GetInt("nbBomb");
     }
 
     private void Update()
@@ -40,6 +40,7 @@ public class BOMB : MonoBehaviour
     {
         bal = Instantiate(bombObject, gameObject.transform.position, Quaternion.identity);
         _nbBomb -= 1;
+        PlayerPrefs.SetInt("nbBomb", _nbBomb);
         StartCoroutine(TimeBomb(2));
     }
 

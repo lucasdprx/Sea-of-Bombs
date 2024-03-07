@@ -89,7 +89,8 @@ public class MovePlayer : MonoBehaviour
             if (hitCollider.GetComponent<Case>() != null)
                 if (hitCollider.GetComponent<Case>()._isCrate && !BOMB.Instance._isFlee)
                 {
-                    BOMB.Instance.SpawnBomb();
+                    if (PlayerPrefs.GetInt("nbBomb") > 0)
+                        BOMB.Instance.SpawnBomb();
                     Flee();
                 }
         }
@@ -102,7 +103,7 @@ public class MovePlayer : MonoBehaviour
             if (_ennemi[i] != null)
                 if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
                 {
-                    if (BOMB.Instance._nbBomb > 0)
+                    if (PlayerPrefs.GetInt("nbBomb") > 0)
                         BOMB.Instance.SpawnBomb();
                     Flee();
                 }

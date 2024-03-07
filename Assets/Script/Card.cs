@@ -9,6 +9,7 @@ public class Card : MonoBehaviour
     public List<CardData> _cardShow = new();
     public List<TextMeshProUGUI> _text = new();
     public List<TextMeshProUGUI> _textTitle = new();
+    public List<TextMeshProUGUI> _textPrice = new();
     private int _prestige = 1;
 
     private void Start()
@@ -38,6 +39,7 @@ public class Card : MonoBehaviour
                 _cardShow[_cardNb] = _card[_rand];
                 _text[_cardNb].text = _card[_rand]._description;
                 _textTitle[_cardNb].text = _card[_rand]._name + "  " + _card[_rand]._prestige.ToString();
+                _textPrice[_cardNb].text = _card[_rand]._price.ToString();
 
 
                 _cardNb += 1;
@@ -46,12 +48,18 @@ public class Card : MonoBehaviour
             }
             
         }
-        print(_cardNb);
     }
 
     public void Reroll()
     {
-        ShowCard();
+        if (PlayerPrefs.GetInt("nbGold") >= 2)
+        {
+            ShowCard();
+            CardEffect.instance.ResetButton();
+            CardEffect.instance._nbGold -= 2;
+            PlayerPrefs.SetInt("nbGold", CardEffect.instance._nbGold);
+            CardEffect.instance._textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
+        } 
     }
 
     public void StartGame()
@@ -61,6 +69,12 @@ public class Card : MonoBehaviour
 
     public void Upgrade()
     {
-        _prestige++;
+        if (PlayerPrefs.GetInt("nbGold") >= 8)
+        {
+            CardEffect.instance._nbGold -= 8;
+            _prestige++;
+            PlayerPrefs.SetInt("nbGold", CardEffect.instance._nbGold);
+            CardEffect.instance._textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
+        }
     }
 }

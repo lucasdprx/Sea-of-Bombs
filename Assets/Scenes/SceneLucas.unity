@@ -21801,6 +21801,7 @@ MonoBehaviour:
   - {fileID: 602457162}
   _initPos: {x: 0, y: 0, z: 0}
   _posBomb: {x: 0, y: 0, z: 0}
+  _speedEnnemi: 0
 --- !u!1 &1901414732
 GameObject:
   m_ObjectHideFlags: 0
@@ -22697,6 +22698,9 @@ MonoBehaviour:
   - {fileID: 602457158}
   _agent: {fileID: 1965995297}
   _initPos: {x: 0, y: 0, z: 0}
+  _hpPlayer: 0
+  _nbGold: 0
+  _speed: 0
 --- !u!136 &1965995293
 CapsuleCollider:
   m_ObjectHideFlags: 0

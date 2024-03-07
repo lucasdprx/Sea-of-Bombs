@@ -10,6 +10,10 @@ public class MovePlayer : MonoBehaviour
     private bool _wait;
     public Vector3 _initPos;
     public static MovePlayer Instance;
+
+    public int _hpPlayer;
+    public int _nbGold;
+    public int _speed;
     private void Awake()
     {
         if (Instance != null)
@@ -25,6 +29,11 @@ public class MovePlayer : MonoBehaviour
         
         _initPos = _agent.transform.position;
         StartCoroutine(FollowEnnemi(0.3f));
+
+        _hpPlayer = PlayerPrefs.GetInt("nbHp");
+        _nbGold = PlayerPrefs.GetInt("nbGold");
+        _speed = PlayerPrefs.GetInt("Speed");
+        _agent.speed += _speed;
     }
     private void Update()
     {

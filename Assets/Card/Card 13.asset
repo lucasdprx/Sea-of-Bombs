@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83355a06d8e2bb14f98e77fe95fdadb6, type: 3}
   m_Name: Card 13
   m_EditorClassIdentifier: 
-  _bomb: 1
+  _bomb: 2
   _hp: 0
   _speed: 0
-  _price: 1
-  _description: You gain 1 bomb
+  _price: 2
+  _description: You gain 2 bomb
   _image: {fileID: 0}
   _imageDos: {fileID: 0}
   _name: Bomb

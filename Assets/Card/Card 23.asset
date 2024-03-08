@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bomb: 0
   _hp: 0
-  _speed: -1
+  _speed: -2
   _price: 5
   _description: All ennemi lose 2 speed
   _image: {fileID: 0}
   _imageDos: {fileID: 0}
-  _name: Bomb
+  _name: Speed Ennemi
   _prestige: 3

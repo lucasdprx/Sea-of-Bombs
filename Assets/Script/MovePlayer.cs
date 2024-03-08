@@ -28,6 +28,7 @@ public class MovePlayer : MonoBehaviour
             StartCoroutine(wait(1.0f));
         
         _initPos = _agent.transform.position;
+        print(_initPos);
         StartCoroutine(FollowEnnemi(0.3f));
 
         _hpPlayer = PlayerPrefs.GetInt("nbHp");
@@ -88,7 +89,7 @@ public class MovePlayer : MonoBehaviour
         foreach (var hitCollider in hitColliders)
         {
             if (hitCollider.GetComponent<Case>() != null)
-                if (hitCollider.GetComponent<Case>()._isCrate && !BOMB.Instance._isFlee)
+                if (hitCollider.GetComponent<Case>()._isCrate && !BOMB.Instance._isFlee && _agent.transform.position.x != _initPos.x && _agent.transform.position.z != _initPos.z)
                 {
                     if (PlayerPrefs.GetInt("nbBomb") > 0)
                         BOMB.Instance.SpawnBomb();

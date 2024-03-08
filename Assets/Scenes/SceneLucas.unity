@@ -19624,7 +19624,7 @@ MonoBehaviour:
   _mobSpawnCount: 0
   _borderCases: []
   _centerCases: []
-  _speedZone: 20
+  _speedZone: 25
 --- !u!4 &1198064244
 Transform:
   m_ObjectHideFlags: 0

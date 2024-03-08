@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GridManager : MonoBehaviour
 {
@@ -45,7 +46,9 @@ public class GridManager : MonoBehaviour
         for (int i = 0; i < 9; i++)
         {
             cases[i + 9 * _reduction].SetInvincible();
-            cases[cases.Count - 1 - ( i + 9 * _reduction)].SetInvincible();
+            cases[cases.Count - 1 - (i + 9 * _reduction)].SetInvincible();
+            cases[i + 9 * _reduction].GetComponent<NavMeshObstacle>().carving = true;
+            cases[cases.Count - 1 - (i + 9 * _reduction)].GetComponent<NavMeshObstacle>().carving = true;
         }
         _reduction++;
     }

@@ -46,7 +46,7 @@ public class Card : MonoBehaviour
             {
                 _cardShow[_cardNb] = _card[_rand];
                 _text[_cardNb].text = _card[_rand]._description;
-                _textTitle[_cardNb].text = _card[_rand]._name + "  " + _card[_rand]._prestige.ToString();
+                _textTitle[_cardNb].text = _card[_rand]._name + " level " + _card[_rand]._prestige.ToString();
                 _textPrice[_cardNb].text = _card[_rand]._price.ToString();
 
 
@@ -85,9 +85,9 @@ public class Card : MonoBehaviour
 
     public void Upgrade()
     {
-        if (PlayerPrefs.GetInt("nbGold") >= 4)
+        if (PlayerPrefs.GetInt("nbGold") >= 3)
         {
-            CardEffect.instance._nbGold -= 8;
+            CardEffect.instance._nbGold -= 3;
             _prestige++;
             PlayerPrefs.SetInt("nbGold", CardEffect.instance._nbGold);
             CardEffect.instance._textGold.text = PlayerPrefs.GetInt("nbGold").ToString();

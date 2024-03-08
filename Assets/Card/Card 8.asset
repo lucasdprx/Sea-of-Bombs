@@ -19,5 +19,5 @@ MonoBehaviour:
   _description: You gain 1 hp
   _image: {fileID: 0}
   _imageDos: {fileID: 0}
-  _name: Bomb
+  _name: HP
   _prestige: 1

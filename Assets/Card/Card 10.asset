@@ -19,5 +19,5 @@ MonoBehaviour:
   _description: You gain 1 speed
   _image: {fileID: 0}
   _imageDos: {fileID: 0}
-  _name: Bomb
+  _name: Speed
   _prestige: 1

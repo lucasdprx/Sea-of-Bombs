@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Card 20
   m_EditorClassIdentifier: 
   _bomb: 0
-  _hp: 1
+  _hp: 3
   _speed: 0
-  _price: 1
-  _description: You gain 1 hp
+  _price: 4
+  _description: You gain 3 hp
   _image: {fileID: 0}
   _imageDos: {fileID: 0}
-  _name: Bomb
+  _name: HP
   _prestige: 3

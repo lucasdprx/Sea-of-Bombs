@@ -23,6 +23,7 @@ public class ButtonManager : MonoBehaviour
     {
         //_audioSource.Play();
         Screen.SetResolution(1920, 1080, true);
+        Time.timeScale = 1.0f;
     }
 
     public void PlayGame()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
@@ -25,10 +26,16 @@ public class ButtonManager : MonoBehaviour
     {
         Screen.SetResolution(1920, 1080, true);
         Time.timeScale = 1.0f;
+        if (PlayerPrefs.GetInt("Syncro") == 1 && AudioSlider != null)
+        {
+            AudioSlider.GetComponent<SettingsMenu>().SFXSound.value = PlayerPrefs.GetFloat("SFX");
+            AudioSlider.GetComponent<SettingsMenu>().MusicSound.value = PlayerPrefs.GetFloat("Music");
+        }
     }
 
     public void PlayGame()
     {
+        
         PlayerPrefs.SetFloat("SFX", AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
         PlayerPrefs.SetFloat("Music", AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
         PlayerPrefs.SetInt("nbBomb", 10);
@@ -38,6 +45,7 @@ public class ButtonManager : MonoBehaviour
         PlayerPrefs.SetInt("SpeedEnnemi", 0);
         PlayerPrefs.SetInt("Wave", 1);
         PlayerPrefs.SetInt("Prestige", 1);
+        PlayerPrefs.SetInt("Syncro", 1);
         Time.timeScale = 1.0f;
         AudioManager.instance.PlaySong("Button");
         SceneManager.LoadScene("Shop");
@@ -45,13 +53,36 @@ public class ButtonManager : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1.0f;
+        PlayerPrefs.SetFloat("SFX", AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
+        PlayerPrefs.SetFloat("Music", AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
         AudioManager.instance.PlaySong("Button");
         SceneManager.LoadScene("MainMenu");
     }
-    public void PauseMenu()
+    public void PauseMenu(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+        {
+            AudioManager.instance.PlaySong("Button");
+            if (!_pauseActive)
+            {
+                GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(true);
+                _pauseActive = true;
+                Time.timeScale = 0.0f;
+            }
+            else
+            {
+                GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(false);
+                _pauseActive = false;
+                Time.timeScale = 1.0f;
+                GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void PauseMenuButton()
     {
         AudioManager.instance.PlaySong("Button");
-        if (!_pauseActive) 
+        if (!_pauseActive)
         {
             GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(true);
             _pauseActive = true;
@@ -62,6 +93,7 @@ public class ButtonManager : MonoBehaviour
             GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(false);
             _pauseActive = false;
             Time.timeScale = 1.0f;
+            GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(false);
         }
     }
     public void EndMenu()

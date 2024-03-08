@@ -45,7 +45,6 @@ public class BOMB : MonoBehaviour
             Move_Ennemi.Instance._textDefeat.text = "Vous n'avez plus de bombe";
             _textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
             Time.timeScale = 0.0f;
-            PlayerPrefs.DeleteAll();
             _textBomb.text = "1";
         }
     }

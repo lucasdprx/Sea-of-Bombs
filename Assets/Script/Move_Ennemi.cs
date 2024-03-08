@@ -46,7 +46,7 @@ public class Move_Ennemi : MonoBehaviour
         {
             _wave += 1;
             PlayerPrefs.SetInt("Wave", _wave);
-            PlayerPrefs.SetInt("nbGold", PlayerPrefs.GetInt("nbGold") + 3);
+            PlayerPrefs.SetInt("nbGold", PlayerPrefs.GetInt("nbGold") + 5);
             SceneManager.LoadScene("Shop");
         }
     }

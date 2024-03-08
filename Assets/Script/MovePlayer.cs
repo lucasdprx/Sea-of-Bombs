@@ -14,6 +14,8 @@ public class MovePlayer : MonoBehaviour
     public int _hpPlayer;
     public int _nbGold;
     public int _speed;
+
+    public GameObject AudioSlider;
     private void Awake()
     {
         if (Instance != null)
@@ -24,6 +26,9 @@ public class MovePlayer : MonoBehaviour
 
     private void Start()
     {
+        AudioSlider.GetComponent<SettingsMenu>().SFXSound.value = PlayerPrefs.GetFloat("SFX");
+        AudioSlider.GetComponent<SettingsMenu>().MusicSound.value = PlayerPrefs.GetFloat("Music");
+
         AudioManager.instance.PlaySong("Pirate");
         if (!_wait)
             StartCoroutine(wait(1.0f));

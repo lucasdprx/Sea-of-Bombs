@@ -16,6 +16,8 @@ public class FadeOut : MonoBehaviour
 
     private void Update()
     {
+        print(Time.timeScale);
+
         if (_animation)
         {
             if (_image.color.a < 1)

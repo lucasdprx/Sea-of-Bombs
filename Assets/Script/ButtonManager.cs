@@ -15,20 +15,22 @@ public class ButtonManager : MonoBehaviour
 
     public static ButtonManager instance;
 
+    public GameObject AudioSlider;
+
     private void Awake()
     {
         instance = this;
     }
     private void Start()
     {
-        //_audioSource.Play();
         Screen.SetResolution(1920, 1080, true);
         Time.timeScale = 1.0f;
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Shop");
+        PlayerPrefs.SetFloat("SFX", AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
+        PlayerPrefs.SetFloat("Music", AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
         PlayerPrefs.SetInt("nbBomb", 10);
         PlayerPrefs.SetInt("nbGold", 5);
         PlayerPrefs.SetInt("nbHp", 3);
@@ -36,14 +38,18 @@ public class ButtonManager : MonoBehaviour
         PlayerPrefs.SetInt("SpeedEnnemi", 0);
         PlayerPrefs.SetInt("Wave", 1);
         Time.timeScale = 1.0f;
+        AudioManager.instance.PlaySong("Button");
+        SceneManager.LoadScene("Shop");
     }
     public void MainMenu()
     {
         Time.timeScale = 1.0f;
+        AudioManager.instance.PlaySong("Button");
         SceneManager.LoadScene("MainMenu");
     }
     public void PauseMenu()
     {
+        AudioManager.instance.PlaySong("Button");
         if (!_pauseActive) 
         {
             GameObject.Find("MenuManager").transform.Find("PauseMenu").gameObject.SetActive(true);
@@ -95,6 +101,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OptionMenu()
     {
+        AudioManager.instance.PlaySong("Button");
         if (!_optionActive)
         {
             GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(true);
@@ -116,6 +123,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void OptionMenuGamePause()
     {
+        AudioManager.instance.PlaySong("Button");
         if (!_optionActive)
         {
             GameObject.Find("MenuManager").transform.Find("Option").gameObject.SetActive(true);
@@ -134,6 +142,7 @@ public class ButtonManager : MonoBehaviour
 
     public void Credit()
     {
+        AudioManager.instance.PlaySong("Button");
         GameObject.Find("MenuManager").transform.Find("Credit").gameObject.SetActive(true);
         GameObject.Find("MenuManager").transform.Find("CreditButton").gameObject.SetActive(false);
         GameObject.Find("MenuManager").transform.Find("PlayButton").gameObject.SetActive(false);
@@ -143,6 +152,7 @@ public class ButtonManager : MonoBehaviour
 
     public void CreditClose()
     {
+        AudioManager.instance.PlaySong("Button");
         GameObject.Find("MenuManager").transform.Find("Credit").gameObject.SetActive(false);
         GameObject.Find("MenuManager").transform.Find("CreditButton").gameObject.SetActive(true);
         GameObject.Find("MenuManager").transform.Find("PlayButton").gameObject.SetActive(true);

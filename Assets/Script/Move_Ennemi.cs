@@ -47,6 +47,8 @@ public class Move_Ennemi : MonoBehaviour
             _wave += 1;
             PlayerPrefs.SetInt("Wave", _wave);
             PlayerPrefs.SetInt("nbGold", PlayerPrefs.GetInt("nbGold") + 5);
+            PlayerPrefs.SetFloat("SFX", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
+            PlayerPrefs.SetFloat("Music", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
             SceneManager.LoadScene("Shop");
         }
     }
@@ -84,7 +86,9 @@ public class Move_Ennemi : MonoBehaviour
                     {
                         PlayerPrefs.SetInt("nbHp", PlayerPrefs.GetInt("nbHp") - 1);
                         SceneManager.LoadScene("Shop");
-                    } 
+                    }
+                    PlayerPrefs.SetFloat("SFX", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
+                    PlayerPrefs.SetFloat("Music", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
                 }
                 if (BOMB.Instance._explosion)
                 {

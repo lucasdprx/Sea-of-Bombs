@@ -22,7 +22,8 @@ public class Card : MonoBehaviour
 
     private void Start()
     {
-        ShowCard(); 
+        ShowCard();
+        _prestige = PlayerPrefs.GetInt("Prestige");
     }
 
     private void ShowCard()
@@ -92,6 +93,7 @@ public class Card : MonoBehaviour
         {
             CardEffect.instance._nbGold -= 3;
             _prestige++;
+            PlayerPrefs.SetInt("Prestige", _prestige);
             PlayerPrefs.SetInt("nbGold", CardEffect.instance._nbGold);
             CardEffect.instance._textGold.text = PlayerPrefs.GetInt("nbGold").ToString();
         }

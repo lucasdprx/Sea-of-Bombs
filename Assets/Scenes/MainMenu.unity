@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tuhan
+  m_text: Tuhan Henry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4274d8f32fe49054cbb69c1d52e94f5a, type: 2}
   m_sharedMaterial: {fileID: 8017716429079395276, guid: 4274d8f32fe49054cbb69c1d52e94f5a, type: 2}
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thomas
+  m_text: Thomas Esposito
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4274d8f32fe49054cbb69c1d52e94f5a, type: 2}
   m_sharedMaterial: {fileID: 8017716429079395276, guid: 4274d8f32fe49054cbb69c1d52e94f5a, type: 2}
@@ -4534,7 +4534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lucas
+  m_text: Lucas Darpeix
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4274d8f32fe49054cbb69c1d52e94f5a, type: 2}
   m_sharedMaterial: {fileID: 8017716429079395276, guid: 4274d8f32fe49054cbb69c1d52e94f5a, type: 2}

@@ -37,6 +37,7 @@ public class ButtonManager : MonoBehaviour
         PlayerPrefs.SetInt("Speed", 0);
         PlayerPrefs.SetInt("SpeedEnnemi", 0);
         PlayerPrefs.SetInt("Wave", 1);
+        PlayerPrefs.SetInt("Prestige", 1);
         Time.timeScale = 1.0f;
         AudioManager.instance.PlaySong("Button");
         SceneManager.LoadScene("Shop");

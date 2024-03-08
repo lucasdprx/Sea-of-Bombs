@@ -36,7 +36,6 @@ public class MovePlayer : MonoBehaviour
             StartCoroutine(wait(1.0f));
         
         _initPos = _agent.transform.position;
-        print(_initPos);
         StartCoroutine(FollowEnnemi(0.3f));
 
         _hpPlayer = PlayerPrefs.GetInt("nbHp");

@@ -16,7 +16,6 @@ public class FadeOut : MonoBehaviour
 
     private void Update()
     {
-        print(Time.timeScale);
 
         if (_animation)
         {

@@ -32,7 +32,7 @@ public class ButtonManager : MonoBehaviour
         PlayerPrefs.SetFloat("SFX", AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
         PlayerPrefs.SetFloat("Music", AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
         PlayerPrefs.SetInt("nbBomb", 10);
-        PlayerPrefs.SetInt("nbGold", 5);
+        PlayerPrefs.SetInt("nbGold", 6);
         PlayerPrefs.SetInt("nbHp", 3);
         PlayerPrefs.SetInt("Speed", 0);
         PlayerPrefs.SetInt("SpeedEnnemi", 0);

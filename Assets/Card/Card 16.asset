@@ -15,7 +15,7 @@ MonoBehaviour:
   _bomb: 0
   _hp: 0
   _speed: 2
-  _price: 3
+  _price: 2
   _description: You gain 2 speed
   _image: {fileID: 0}
   _imageDos: {fileID: 0}

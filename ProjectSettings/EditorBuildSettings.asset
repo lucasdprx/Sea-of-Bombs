@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: edae8058be63ab247b9c0c37dc85b181
   - enabled: 1
-    path: Assets/Scenes/MiseEnCommun.unity
-    guid: 48ac64952a953e541976a86f7e5beee5
-  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: b17da0e65efd51c4b98f0231df82d692
   - enabled: 1

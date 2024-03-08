@@ -16,6 +16,8 @@ public class MovePlayer : MonoBehaviour
     public int _speed;
 
     public GameObject AudioSlider;
+
+    public bool _canKill = true;
     private void Awake()
     {
         if (Instance != null)
@@ -111,15 +113,18 @@ public class MovePlayer : MonoBehaviour
 
     public void Kill()
     {
-        for (int i = 0; i < _ennemi.Count; ++i)
+        if (_canKill)
         {
-            if (_ennemi[i] != null)
-                if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
-                {
-                    if (PlayerPrefs.GetInt("nbBomb") > 0)
-                        BOMB.Instance.SpawnBomb();
-                    Flee();
-                }
+            for (int i = 0; i < _ennemi.Count; ++i)
+            {
+                if (_ennemi[i] != null)
+                    if (Vector3.Distance(_ennemi[i].transform.position, _agent.transform.position) <= 4 && _wait && !BOMB.Instance._isFlee)
+                    {
+                        if (PlayerPrefs.GetInt("nbBomb") > 0)
+                            BOMB.Instance.SpawnBomb();
+                        Flee();
+                    }
+            }
         }
     }
 }

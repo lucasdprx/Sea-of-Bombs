@@ -64,6 +64,7 @@ public class BOMB : MonoBehaviour
         Move_Ennemi.Instance._posBomb = bal.transform.position;
         BreakWall();
         Destroy(bal);
+        MovePlayer.Instance._canKill = false;
         _isFlee = false;
         _explosion = true;
         _nbBomb -= 1;
@@ -71,6 +72,9 @@ public class BOMB : MonoBehaviour
         PlayerPrefs.SetInt("nbBomb", _nbBomb);
         _textBomb.text = PlayerPrefs.GetInt("nbBomb").ToString();
         _particle.Play();
+        yield return new WaitForSeconds(0.1f);
+        MovePlayer.Instance._canKill = true;
+
     }
 
     private void BreakWall()

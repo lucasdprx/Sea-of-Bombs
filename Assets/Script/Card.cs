@@ -60,6 +60,7 @@ public class Card : MonoBehaviour
 
     public void Reroll()
     {
+        AudioManager.instance.PlaySong("Button");
         if (PlayerPrefs.GetInt("nbGold") >= 2)
         {
             ShowCard();
@@ -80,11 +81,13 @@ public class Card : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.instance.PlaySong("Button");
         SceneManager.LoadScene("SceneLucas");
     }
 
     public void Upgrade()
     {
+        AudioManager.instance.PlaySong("Button");
         if (PlayerPrefs.GetInt("nbGold") >= 3)
         {
             CardEffect.instance._nbGold -= 3;

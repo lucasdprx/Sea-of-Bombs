@@ -24,6 +24,7 @@ public class MovePlayer : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.PlaySong("Pirate");
         if (!_wait)
             StartCoroutine(wait(1.0f));
         
@@ -38,6 +39,11 @@ public class MovePlayer : MonoBehaviour
     }
     private void Update()
     {
+        if (!AudioManager.instance.sound[1].Value.Source.isPlaying)
+        {
+            AudioManager.instance.PlaySong("Pirate");
+        }
+
         if (_ennemi != null)
             ExplosionDamage(_agent.transform.position, .55f);
 

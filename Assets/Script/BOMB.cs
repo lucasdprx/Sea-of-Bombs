@@ -67,8 +67,8 @@ public class BOMB : MonoBehaviour
         if (_textBomb.text == "0" && !Move_Ennemi.Instance.IsAllDead())
         {
             Move_Ennemi.Instance._uiDefeat.SetActive(true);
-            Move_Ennemi.Instance._textDefeat.text = "Vous n'avez plus de bombe";
-            _textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
+            Move_Ennemi.Instance._textDefeat.text = "You don't have anymore bomb";
+            _textWave.text = "You arrived at the wave " + PlayerPrefs.GetInt("Wave").ToString();
             Time.timeScale = 0.0f;
             _textBomb.text = "1";
         }

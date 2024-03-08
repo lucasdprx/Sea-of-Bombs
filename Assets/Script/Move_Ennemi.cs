@@ -44,9 +44,9 @@ public class Move_Ennemi : MonoBehaviour
 
         if (IsAllDead())
         {
-            _wave += 1;
-            PlayerPrefs.SetInt("Wave", _wave);
+            PlayerPrefs.SetInt("Wave", PlayerPrefs.GetInt("Wave") + 1);
             PlayerPrefs.SetInt("nbGold", PlayerPrefs.GetInt("nbGold") + 5);
+            PlayerPrefs.SetInt("nbBomb", PlayerPrefs.GetInt("nbBomb") + 2);
             PlayerPrefs.SetFloat("SFX", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);
             PlayerPrefs.SetFloat("Music", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().MusicSound.value);
             SceneManager.LoadScene("Shop");
@@ -73,18 +73,17 @@ public class Move_Ennemi : MonoBehaviour
                 if (Vector3.Distance(_ennemi.transform.position, _agent[i].transform.position) <= 1)
                 {
                     Destroy(_ennemi);
+                    PlayerPrefs.SetInt("nbHp", PlayerPrefs.GetInt("nbHp") - 1);
                     _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
                     if (PlayerPrefs.GetInt("nbHp") <= 0)
                     {
-                        PlayerPrefs.DeleteAll();
                         _uiDefeat.SetActive(true);
-                        _textDefeat.text = "Vous n'avez plus de point de vie";
-                        BOMB.Instance._textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
+                        _textDefeat.text = "You don't have anymore health point";
+                        BOMB.Instance._textWave.text = "You arrived at the wave " + PlayerPrefs.GetInt("Wave").ToString();
                         Time.timeScale = 0.0f;
                     }
                     else
                     {
-                        PlayerPrefs.SetInt("nbHp", PlayerPrefs.GetInt("nbHp") - 1);
                         SceneManager.LoadScene("Shop");
                     }
                     PlayerPrefs.SetFloat("SFX", MovePlayer.Instance.AudioSlider.GetComponent<SettingsMenu>().SFXSound.value);

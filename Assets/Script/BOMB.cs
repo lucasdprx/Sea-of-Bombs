@@ -38,15 +38,6 @@ public class BOMB : MonoBehaviour
     {
         if (bal != null)    
             _particle.transform.position = bal.transform.position;
-
-        if (_textBomb.text == "0" && !Move_Ennemi.Instance.IsAllDead())
-        {
-            Move_Ennemi.Instance._uiDefeat.SetActive(true);
-            Move_Ennemi.Instance._textDefeat.text = "Vous n'avez plus de bombe";
-            _textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
-            Time.timeScale = 0.0f;
-            _textBomb.text = "1";
-        }
     }
 
     public void SpawnBomb()
@@ -73,6 +64,14 @@ public class BOMB : MonoBehaviour
         _particle.Play();
         yield return new WaitForSeconds(0.1f);
         MovePlayer.Instance._canKill = true;
+        if (_textBomb.text == "0" && !Move_Ennemi.Instance.IsAllDead())
+        {
+            Move_Ennemi.Instance._uiDefeat.SetActive(true);
+            Move_Ennemi.Instance._textDefeat.text = "Vous n'avez plus de bombe";
+            _textWave.text = "Vous etes arrivez jusqu'a la vague " + PlayerPrefs.GetInt("Wave").ToString();
+            Time.timeScale = 0.0f;
+            _textBomb.text = "1";
+        }
 
     }
 

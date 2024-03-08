@@ -58,7 +58,9 @@ public class BOMB : MonoBehaviour
 
     IEnumerator TimeBomb(int second)
     {
-        yield return new WaitForSeconds(second);
+        yield return new WaitForSeconds(second - 0.2f);
+        AudioManager.instance.PlaySong("Bomb");
+        yield return new WaitForSeconds(0.2f);
         Move_Ennemi.Instance._posBomb = bal.transform.position;
         BreakWall();
         Destroy(bal);

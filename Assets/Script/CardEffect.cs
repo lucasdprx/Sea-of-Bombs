@@ -41,6 +41,7 @@ public class CardEffect : MonoBehaviour
     }
     public void Card1()
     {
+        AudioManager.instance.PlaySong("Card");
         if (gameObject.GetComponent<Card>()._cardShow[0]._price <= PlayerPrefs.GetInt("nbGold") && _button[0])
         {
             AddStats(0);
@@ -53,6 +54,7 @@ public class CardEffect : MonoBehaviour
     }
     public void Card2()
     {
+        AudioManager.instance.PlaySong("Card");
         if (gameObject.GetComponent<Card>()._cardShow[1]._price <= PlayerPrefs.GetInt("nbGold") && _button[1])
         {
             AddStats(1);
@@ -65,6 +67,7 @@ public class CardEffect : MonoBehaviour
     }
     public void Card3()
     {
+        AudioManager.instance.PlaySong("Card");
         if (gameObject.GetComponent<Card>()._cardShow[2]._price <= PlayerPrefs.GetInt("nbGold") && _button[2])
         {
             AddStats(2);

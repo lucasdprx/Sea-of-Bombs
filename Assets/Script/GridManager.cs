@@ -101,7 +101,6 @@ public class GridManager : MonoBehaviour
                 if (!cases[rand2]._isCrate && !cases[rand2]._isInvincible)
                 {
                     MovePlayer.Instance._ennemi[j].transform.position = cases[rand2].transform.position;
-                    MovePlayer.Instance._ennemi[j].transform.position += new Vector3(0, 1, 0);
                 }
             }
         }    

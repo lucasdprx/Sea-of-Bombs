@@ -39,7 +39,7 @@ public class Card : MonoBehaviour
             }
                 
             int _rand = Random.Range(0, _card.Count);
-            if (_card[_rand]._prestige > _prestige)
+            if (_card[_rand]._prestige > PlayerPrefs.GetInt("Prestige"))
             {
                 _skipCard = true;
             }

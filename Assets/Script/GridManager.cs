@@ -100,7 +100,7 @@ public class GridManager : MonoBehaviour
                 int rand2 = Random.Range(0, cases.Count);
                 if (!cases[rand2]._isCrate && !cases[rand2]._isInvincible)
                 {
-                    MovePlayer.Instance._ennemi[j].transform.position = cases[rand2].transform.position;
+                    MovePlayer.Instance._ennemi[j].transform.position = new Vector3(cases[rand2].transform.position.x, MovePlayer.Instance._ennemi[j].transform.position.y, cases[rand2].transform.position.z);
                 }
             }
         }    

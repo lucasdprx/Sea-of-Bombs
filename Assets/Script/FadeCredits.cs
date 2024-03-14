@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FadeCredits : MonoBehaviour
 {
-    //[SerializeField] private GameObject _canvasMenu;
     [SerializeField] private List<CanvasGroup> m_objectsToFade = new List<CanvasGroup>();
     [SerializeField] private float m_FadeInDuration, m_fadeOutDuration, m_AttendanceTime, m_WaitBeforeStart;
 

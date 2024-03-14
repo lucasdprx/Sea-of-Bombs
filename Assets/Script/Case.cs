@@ -18,10 +18,6 @@ public class Case : MonoBehaviour
     {
         Instance = this;
     }
-    public void Start()
-    {
-
-    }
 
     public string GetCoordinatesLength()
     {

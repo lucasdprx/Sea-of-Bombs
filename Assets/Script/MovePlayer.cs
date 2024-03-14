@@ -20,9 +20,6 @@ public class MovePlayer : MonoBehaviour
     public bool _canKill = true;
     private void Awake()
     {
-        if (Instance != null)
-            Destroy(Instance);
-
         Instance = this;
     }
 

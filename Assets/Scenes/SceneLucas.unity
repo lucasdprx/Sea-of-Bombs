@@ -10825,8 +10825,6 @@ GameObject:
   m_Component:
   - component: {fileID: 489308531}
   - component: {fileID: 489308534}
-  - component: {fileID: 489308532}
-  - component: {fileID: 489308535}
   m_Layer: 7
   m_Name: Ennemi2
   m_TagString: Untagged
@@ -10843,40 +10841,13 @@ Transform:
   m_GameObject: {fileID: 489308530}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 8}
+  m_LocalPosition: {x: -12, y: 1, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1174856773}
   m_Father: {fileID: 1899285179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &489308532
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489308530}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &489308534
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10886,7 +10857,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 489308530}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5000002
+  m_Radius: 0.5
   m_Speed: 3
   m_Acceleration: 999
   avoidancePriority: 50
@@ -10895,33 +10866,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 3
+  m_BaseOffset: -0.01
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &489308535
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489308530}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.487701, z: 0}
 --- !u!1 &489447298
 GameObject:
   m_ObjectHideFlags: 0
@@ -12274,8 +12222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 602457159}
   - component: {fileID: 602457162}
-  - component: {fileID: 602457160}
-  - component: {fileID: 602457163}
   m_Layer: 7
   m_Name: Ennemi3
   m_TagString: Untagged
@@ -12292,40 +12238,13 @@ Transform:
   m_GameObject: {fileID: 602457158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 8}
+  m_LocalPosition: {x: -12, y: 1, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1856420397}
   m_Father: {fileID: 1899285179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &602457160
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602457158}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &602457162
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12335,7 +12254,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 602457158}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5000002
+  m_Radius: 0.5
   m_Speed: 3
   m_Acceleration: 999
   avoidancePriority: 50
@@ -12344,33 +12263,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 3
+  m_BaseOffset: -0.01
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &602457163
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602457158}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.487701, z: 0}
 --- !u!1 &610142901
 GameObject:
   m_ObjectHideFlags: 0
@@ -19015,12 +18911,10 @@ MonoBehaviour:
   - {fileID: 1065485954}
   - {fileID: 1242186613}
   - {fileID: 1000113921}
-  _crateCount: 40
-  _playerSpawnCount: 0
-  _mobSpawnCount: 0
   _borderCases: []
   _centerCases: []
   _speedZone: 20
+  _crateCount: 40
 --- !u!4 &1198064244
 Transform:
   m_ObjectHideFlags: 0
@@ -23407,8 +23301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1611491862}
   - component: {fileID: 1611491866}
-  - component: {fileID: 1611491869}
-  - component: {fileID: 1611491870}
   m_Layer: 7
   m_Name: Ennemi1
   m_TagString: Untagged
@@ -23425,7 +23317,7 @@ Transform:
   m_GameObject: {fileID: 1611491861}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 8}
+  m_LocalPosition: {x: -12, y: 1, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23441,7 +23333,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1611491861}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5000002
+  m_Radius: 0.5
   m_Speed: 3
   m_Acceleration: 999
   avoidancePriority: 50
@@ -23450,60 +23342,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 3
+  m_BaseOffset: -0.01
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &1611491869
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611491861}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &1611491870
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611491861}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.4877009, z: 0}
 --- !u!1 &1622825808
 GameObject:
   m_ObjectHideFlags: 0
@@ -26756,7 +26598,7 @@ Transform:
   m_GameObject: {fileID: 1899285178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.13, y: 0, z: -7.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

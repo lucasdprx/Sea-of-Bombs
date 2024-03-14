@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class Move_Ennemi : MonoBehaviour
 {
     public GameObject _ennemi;
     public List<NavMeshAgent> _agent = new();
-    [HideInInspector] public Vector3 _initPos;
     [HideInInspector] public Vector3 _posBomb;
     public static Move_Ennemi Instance;
     public int _speedEnnemi;
@@ -19,6 +19,7 @@ public class Move_Ennemi : MonoBehaviour
 
     public GameObject _uiDefeat;
     public TextMeshProUGUI _textDefeat;
+
 
     private void Awake()
     {
@@ -37,10 +38,12 @@ public class Move_Ennemi : MonoBehaviour
             _agent[i].speed += _speedEnnemi;
         }
         _textHp.text = PlayerPrefs.GetInt("nbHp").ToString();
+
+        StartCoroutine(MoveContinue());
     }
     void Update()
     {
-        MoveEnnemi();
+        KillAgent();
 
         if (IsAllDead())
         {
@@ -63,6 +66,12 @@ public class Move_Ennemi : MonoBehaviour
         return true;
     }
 
+    IEnumerator MoveContinue()
+    {
+        yield return new WaitForSeconds(0.1f);
+        MoveEnnemi();
+        StartCoroutine(MoveContinue());
+    }
     private void MoveEnnemi()
     {
         for (int i = 0; i < _agent.Count; i++)
@@ -70,6 +79,15 @@ public class Move_Ennemi : MonoBehaviour
             if (_agent[i] != null && _ennemi != null)
             {
                 _agent[i].SetDestination(_ennemi.transform.position);
+            }
+        }
+    }
+    private void KillAgent()
+    {
+        for (int i = 0; i < _agent.Count; i++)
+        {
+            if (_agent[i] != null && _ennemi != null)
+            {
                 if (Vector3.Distance(_ennemi.transform.position, _agent[i].transform.position) <= 1)
                 {
                     Destroy(_ennemi);
@@ -95,7 +113,6 @@ public class Move_Ennemi : MonoBehaviour
                     {
                         Destroy(_agent[i].gameObject);
                         Destroy(MovePlayer.Instance._ennemi[i]);
-                        continue;
                     }
                 }
             }

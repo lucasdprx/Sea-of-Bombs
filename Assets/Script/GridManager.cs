@@ -7,13 +7,6 @@ public class GridManager : MonoBehaviour
 {
     [SerializeField] private List<Case> cases = new List<Case>();
 
-
-    [SerializeField] private int _crateCount;
-    [SerializeField] private int _playerSpawnCount;
-    [SerializeField] private int _mobSpawnCount;
-
-    private int _total;
-    private int _totalBase;
     private int _reduction;
 
     public List<Case> _borderCases;
@@ -22,6 +15,8 @@ public class GridManager : MonoBehaviour
     public static GridManager Instance;
 
     public float _speedZone;
+    [SerializeField] private int _crateCount;
+
     private void Awake()
     {
         Instance = this;
@@ -29,12 +24,11 @@ public class GridManager : MonoBehaviour
     private void Start()
     {
         SetBorderList();
-
-        _total = _crateCount + _playerSpawnCount + _mobSpawnCount;
         InvestmentElement();
         StartCoroutine(MapRoutine());
+        SetPos();
     }
-
+    
     IEnumerator MapRoutine()
     {
         yield return new WaitForSeconds(_speedZone);
@@ -72,45 +66,37 @@ public class GridManager : MonoBehaviour
     public void InvestmentElement()
     {
         int total = _crateCount;
-        bool _isBlock = false;
         for (int i = 0; i < total; i++)
         {
-            if (_isBlock)
-            {
-                i--;
-                _isBlock = false;
-            }
             int _rand = Random.Range(0, _centerCases.Count);
             if (!_centerCases[_rand]._isInvincible && !_centerCases[_rand]._isCrate)
             {
                 _centerCases[_rand].SetCrate();
             }
-            else 
-                _isBlock = true;
+            else
+                i--;
         }
-        SetPos();
     }
 
-    private void SetPos()
+    public void SetPos()
     {
         for (int j = 0; j < MovePlayer.Instance._ennemi.Count; j++)
         {
-            for (int i = 0; cases.Count > i; i++)
+            int rand2 = Random.Range(0, cases.Count);
+            if (!cases[rand2]._isCrate && !cases[rand2]._isInvincible)
             {
-                int rand2 = Random.Range(0, cases.Count);
-                if (!cases[rand2]._isCrate && !cases[rand2]._isInvincible)
-                {
-                    MovePlayer.Instance._ennemi[j].transform.position = new Vector3(cases[rand2].transform.position.x, MovePlayer.Instance._ennemi[j].transform.position.y, cases[rand2].transform.position.z);
-                }
+                MovePlayer.Instance._ennemi[j].GetComponent<NavMeshAgent>().nextPosition = new Vector3(cases[rand2].transform.position.x, MovePlayer.Instance._ennemi[j].transform.position.y, cases[rand2].transform.position.z);
+                print(MovePlayer.Instance._ennemi[j].transform.position);
             }
-        }    
+            else
+                j--;
+        }
     }
 
     public List<Case> GetGrid()
     {
         return cases;
     }
-
 }
 
 
